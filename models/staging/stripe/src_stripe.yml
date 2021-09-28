@@ -7,12 +7,12 @@ sources:
     tables:    
       - name: payment
         description: Raw payment data.
-        loaded_at_field: created_at
+        loaded_at_field: created
         freshness:
           warn_after: {count: 15, period: day}
           error_after: {count: 30, period: day}
         columns:
-          - name: payment_id
+          - name: id
             description: Primary key for payments.
             tests:
               - unique
